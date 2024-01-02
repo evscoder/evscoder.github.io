@@ -1,0 +1,509 @@
+    <!DOCTYPE html>
+    <html class="no-js" lang="ru">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="HandheldFriendly" content="True" />
+        <title>Evgeny Staroverov</title>
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="application-name" content="" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <link rel="stylesheet" href="assets/css/vendor.css" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/img/content/favicons/apple-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/img/content/favicons/apple-icon-60x60.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/img/content/favicons/apple-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/img/content/favicons/apple-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/img/content/favicons/apple-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/img/content/favicons/apple-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/img/content/favicons/apple-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/img/content/favicons/apple-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/content/favicons/apple-icon-180x180.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/img/content/favicons/android-icon-192x192.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/content/favicons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/img/content/favicons/favicon-96x96.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/content/favicons/favicon-16x16.png" />
+        <link rel="manifest" href="assets/img/content/favicons/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+        <meta name="theme-color" content="#ffffff" />
+    </head>
+
+    <body>
+        <div data-barba="wrapper" data-barba-namespace="home">
+            <div class="page-wrapper" data-barba="container">
+                <header class="page-header">
+                    <div class="page-header__container container">
+                        <div class="page-header__row">
+                            <div class="page-header__left">
+                                <div class="page-header__nav"><a class="page-header__nav-link" href="about.html"><span class="page-header__nav-text">About Me</span></a><a class="page-header__nav-link page-header__nav-link--pre" href="https://github.com/evscoder" target="_blank">
+                                        <svg class="icon-github" width="14" height="14">
+                                            <use xlink:href="assets/img/svg-symbols.svg#github"></use>
+                                        </svg><span class="page-header__nav-text">Github</span></a><a class="page-header__avatar" href="about.html" data-direction="about">
+                                        <div class="page-header__avatar-img"><img src="assets/img/content/avatar.jpg" width="152" alt="#" /></div>
+                                        <div class="tooltip">
+                                            <div class="tooltip__content">
+                                                <div class="tooltip__bg"></div>
+                                                <div class="tooltip__text">Experience</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <button class="switcher-theme" data-switch="theme"><span class="switcher-theme__handle"></span></button>
+                                </div>
+                            </div>
+                            <div class="page-header__center"><a class="page-header__title-link" href="about.html" data-direction="about">
+                                    <h2 class="page-header__title"><span class="char">Evgeny</span> <span class="char">Staroverov</span></h2>
+                                </a></div>
+                        </div>
+                    </div>
+                </header>
+                <div class="intro">
+                    <div class="intro__gradient"></div>
+                    <div class="intro__bg">
+                        <canvas class="intro__stars" id="stars"></canvas>
+                    </div>
+                    <div class="intro-caption">
+                        <div class="intro-caption__title">Portfolio</div>
+                    </div>
+                    <div class="intro__content">
+                        <h1 class="intro__title"><span class="caption intro__title-letters">Evgeny Staroverov</span> <span class="intro__title-letters">Front-End</span> <span class="text-type">Developer <span class="skills">HTML, CSS, JS, TS, React ...</span></span></h1><a class="intro__scroll-btn js-scroll-link is-visible" href="#content"></a>
+                    </div>
+                </div>
+                <div class="switcher-grid">
+                    <div class="switcher-grid__container container">
+                        <button class="switcher-grid__button js-switcher-grid">
+                            <div class="switcher-grid__bar"></div>
+                            <div class="switcher-grid__bar"></div>
+                            <div class="switcher-grid__bar"></div>
+                            <div class="switcher-grid__bar"></div>
+                        </button>
+                        <div class="switcher-grid__filter" id="projectFilter">
+                            <div class="switcher-grid__float"></div>
+                            <button class="switcher-grid__filter-btn is-active" data-toggle="Web Stocks App" data-text="All"></button>
+                            <button class="switcher-grid__filter-btn" data-toggle="Web" data-text="Web"></button>
+                            <button class="switcher-grid__filter-btn" data-toggle="App" data-text="App"></button>
+                            <button class="switcher-grid__filter-btn" data-toggle="Stocks" data-text="Stocks"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-guide">
+                    <div class="project-guide__container">
+                        <svg class="icon-swipe">
+                            <use xlink:href="assets/img/svg-symbols.svg#swipe"></use>
+                        </svg>
+                        <div class="project-guide__text">Swipe projects left to right <br> <small class="font-weight-500">Click to close<small /></div>
+                    </div>
+                </div>
+                <main class="page-content" id="content">
+                    <section class="project-covers" id="projects">
+                        <h1 class="project-covers__title">
+                            <div class="project-covers__title-text">Projects</div>
+                        </h1>
+                        <div class="container container--fluid">
+                            <div class="container__center">
+                                <div class="project-covers__items">
+                                    <div class="project-covers__item" data-sort="App Web">
+                                        <article class="project-item">
+                                            <div class="project-item__inner"><a class="project-item__image-wrap" href="https://evscoder.github.io/otus-course-work-react/" target="_blank">
+                                                    <div class="project-item__image-container"><img class="project-item__image img-cover js-lazy" src="/assets/img/content/projects/game-of-life.jpeg" alt="GEN ART WITH CONWAY'S GAME OF LIFE. As part of the Otus educational course." />
+                                                    </div>
+                                                </a>
+                                                <div class="project-item__details">
+                                                    <div class="project-item__details-inner">
+                                                        <h3 class="project-item__title"><span class="text-uppercase">Game of Life React App</span>
+                                                            <div class="project-item__title-full"><span class="text-uppercase">Game of Life React App</span> – GEN ART WITH CONWAY'S GAME OF LIFE. As part of the Otus educational course.
+                                                            </div>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="project-covers__item" data-sort="App Stocks">
+                                        <article class="project-item">
+                                            <div class="project-item__inner"><a class="project-item__image-wrap" href="http://netgon.ru/themeforest/arion_html/index.html" target="_blank">
+                                                    <div class="project-item__image-container"><img class="project-item__image img-cover js-lazy" src="/assets/img/content/projects/arion.jpg" alt="Admin Dashboard &amp; UI Kit" />
+                                                    </div>
+                                                </a>
+                                                <div class="project-item__details">
+                                                    <div class="project-item__details-inner">
+                                                        <h3 class="project-item__title"><span class="text-uppercase">Arion</span>
+                                                            <div class="project-item__title-full"><span class="text-uppercase">Arion</span> – Admin Dashboard &amp; UI Kit
+                                                            </div>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="project-covers__item" data-sort="App Web">
+                                        <article class="project-item">
+                                            <div class="project-item__inner"><a class="project-item__image-wrap js-lightbox-gallery" href="#" data-cropped="true" data-images="[{&quot;src&quot;:&quot;/assets/img/content/projects/softsmile/1.jpg&quot;,&quot;alt&quot;:&quot;Softsmile&quot;},{&quot;src&quot;:&quot;/assets/img/content/projects/softsmile/2.jpg&quot;,&quot;alt&quot;:&quot;Softsmile&quot;},{&quot;src&quot;:&quot;/assets/img/content/projects/softsmile/3.jpg&quot;,&quot;alt&quot;:&quot;Softsmile&quot;},{&quot;src&quot;:&quot;/assets/img/content/projects/softsmile/4.jpg&quot;,&quot;alt&quot;:&quot;Softsmile&quot;},{&quot;src&quot;:&quot;/assets/img/content/projects/softsmile/5.jpg&quot;,&quot;alt&quot;:&quot;Softsmile&quot;},{&quot;src&quot;:&quot;/assets/img/content/projects/softsmile/6.jpg&quot;,&quot;alt&quot;:&quot;Softsmile&quot;},{&quot;src&quot;:&quot;/assets/img/content/projects/softsmile/7.jpg&quot;,&quot;alt&quot;:&quot;Softsmile&quot;},{&quot;src&quot;:&quot;/assets/img/content/projects/softsmile/8.jpg&quot;,&quot;alt&quot;:&quot;Softsmile&quot;},{&quot;src&quot;:&quot;/assets/img/content/projects/softsmile/9.jpg&quot;,&quot;alt&quot;:&quot;Softsmile&quot;}]">
+                                                    <div class="project-item__image-container"><img class="project-item__image img-cover js-lazy" src="/assets/img/content/projects/softsmile/1.jpg" alt="Was founded by a group of tech disruptors committed to making perfect smiles affordable for everyone." />
+                                                    </div>
+                                                </a>
+                                                <div class="project-item__details">
+                                                    <div class="project-item__details-inner">
+                                                        <h3 class="project-item__title"><span class="text-uppercase"><a href="https://softsmile.com/" target="_blank">Softsmile</a></span>
+                                                            <div class="project-item__title-full"><span class="text-uppercase"><a href="https://softsmile.com/" target="_blank">Softsmile</a></span> – Was founded by a group of tech disruptors committed to making perfect smiles affordable for everyone.
+                                                            </div>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="project-covers__item" data-sort="Web">
+                                        <article class="project-item">
+                                            <div class="project-item__inner"><a class="project-item__image-wrap" href="https://gamemag.ru/" target="_blank">
+                                                    <div class="project-item__image-container"><img class="project-item__image img-cover js-lazy" src="/assets/img/content/projects/gm/1.jpg" alt="This page contains the editors of the first video game portal in Russia" />
+                                                    </div>
+                                                </a>
+                                                <div class="project-item__details">
+                                                    <div class="project-item__details-inner">
+                                                        <h3 class="project-item__title"><span class="text-uppercase"><a href="https://gamemag.ru/" target="_blank">Gamemag.ru</a></span>
+                                                            <div class="project-item__title-full"><span class="text-uppercase"><a href="https://gamemag.ru/" target="_blank">Gamemag.ru</a></span> – This page contains the editors of the first video game portal in Russia
+                                                            </div>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="project-covers__item" data-sort="Stocks">
+                                        <article class="project-item">
+                                            <div class="project-item__inner"><a class="project-item__image-wrap" href="http://netgon.ru/themeforest/geometry-24_html/" target="_blank">
+                                                    <div class="project-item__image-container"><img class="project-item__image img-cover js-lazy" src="/assets/img/content/projects/geometry-24-online-store.jpg" alt="Store Online" />
+                                                    </div>
+                                                </a>
+                                                <div class="project-item__details">
+                                                    <div class="project-item__details-inner">
+                                                        <h3 class="project-item__title"><span class="text-uppercase">Geometry 24</span>
+                                                            <div class="project-item__title-full"><span class="text-uppercase">Geometry 24</span> – Store Online
+                                                            </div>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="project-covers__item" data-sort="Web">
+                                        <article class="project-item">
+                                            <div class="project-item__inner"><a class="project-item__image-wrap" href="https://evscoder.github.io/www/bnns/" target="_blank">
+                                                    <div class="project-item__image-container"><img class="project-item__image img-cover js-lazy" src="/assets/img/content/projects/bananas-promo-website.jpg" alt="We are bananas, Craftsmen of experiences" />
+                                                    </div>
+                                                </a>
+                                                <div class="project-item__details">
+                                                    <div class="project-item__details-inner">
+                                                        <h3 class="project-item__title"><span class="text-uppercase">Bananas</span>
+                                                            <div class="project-item__title-full"><span class="text-uppercase">Bananas</span> – We are bananas, Craftsmen of experiences
+                                                            </div>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="project-covers__item" data-sort="Web">
+                                        <article class="project-item">
+                                            <div class="project-item__inner"><a class="project-item__image-wrap" href="https://evscoder.github.io/www/wbj" target="_blank">
+                                                    <div class="project-item__image-container"><img class="project-item__image img-cover js-lazy" src="/assets/img/content/projects/Waybjj.jpg" alt="The Way of Brazilian Jiu Jitsu" />
+                                                    </div>
+                                                </a>
+                                                <div class="project-item__details">
+                                                    <div class="project-item__details-inner">
+                                                        <h3 class="project-item__title"><span class="text-uppercase">Waybjj</span>
+                                                            <div class="project-item__title-full"><span class="text-uppercase">Waybjj</span> – The Way of Brazilian Jiu Jitsu
+                                                            </div>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="project-covers__item" data-sort="App Web">
+                                        <article class="project-item">
+                                            <div class="project-item__inner"><a class="project-item__image-wrap" href="https://evscoder.github.io/www/ips/servers.html" target="_blank">
+                                                    <div class="project-item__image-container"><img class="project-item__image img-cover js-lazy" src="/assets/img/content/projects/ips.jpg" alt="get directly from your smart home with our newest notification" />
+                                                    </div>
+                                                </a>
+                                                <div class="project-item__details">
+                                                    <div class="project-item__details-inner">
+                                                        <h3 class="project-item__title"><span class="text-uppercase">IPS Admin Panel</span>
+                                                            <div class="project-item__title-full"><span class="text-uppercase">IPS Admin Panel</span> – get directly from your smart home with our newest notification
+                                                            </div>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="project-covers__item" data-sort="Stocks">
+                                        <article class="project-item">
+                                            <div class="project-item__inner"><a class="project-item__image-wrap" href="http://netgon.ru/themeforest/yourtravelworld_html/index.html" target="_blank">
+                                                    <div class="project-item__image-container"><img class="project-item__image img-cover js-lazy" src="/assets/img/content/projects/your-travel-world.jpg" alt="Online Travel Booking" />
+                                                    </div>
+                                                </a>
+                                                <div class="project-item__details">
+                                                    <div class="project-item__details-inner">
+                                                        <h3 class="project-item__title"><span class="text-uppercase">Your Travel World</span>
+                                                            <div class="project-item__title-full"><span class="text-uppercase">Your Travel World</span> – Online Travel Booking
+                                                            </div>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="project-covers__item" data-sort="Stocks">
+                                        <article class="project-item">
+                                            <div class="project-item__inner"><a class="project-item__image-wrap" href="http://netgon.ru/themeforest/carros_html/" target="_blank">
+                                                    <div class="project-item__image-container"><img class="project-item__image img-cover js-lazy" src="/assets/img/content/projects/carros-html-template.jpg" alt="Automotive" />
+                                                    </div>
+                                                </a>
+                                                <div class="project-item__details">
+                                                    <div class="project-item__details-inner">
+                                                        <h3 class="project-item__title"><span class="text-uppercase">Carros</span>
+                                                            <div class="project-item__title-full"><span class="text-uppercase">Carros</span> – Automotive
+                                                            </div>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="project-covers__item project-covers__item--last" data-sort="Web App Stocks">
+                                        <article class="project-item project-item--empty">
+                                            <div class="project-item__inner"><a class="project-item__image-wrap" target="_blank">
+                                                    <div class="project-item__image-container">
+                                                    </div>
+                                                </a>
+                                                <div class="project-item__details">
+                                                    <div class="project-item__details-inner">
+                                                        <h3 class="project-item__title">Project
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-covers__row">
+                            <div class="container">
+                                <div class="container__center">
+                                    <div class="project-covers__row-slider swiper-container" id="projectsCoverSlider">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide" data-slide-sort="App Web">
+                                                <article class="project-item">
+                                                    <div class="project-item__inner"><a class="project-item__image-wrap" href="https://evscoder.github.io/otus-course-work-react/" target="_blank">
+                                                            <div class="project-item__image-container"><img class="project-item__image img-cover js-lazy" src="/assets/img/content/projects/game-of-life.jpeg" alt="GEN ART WITH CONWAY'S GAME OF LIFE. As part of the Otus educational course." />
+                                                            </div>
+                                                        </a>
+                                                        <div class="project-item__details">
+                                                            <div class="project-item__details-inner">
+                                                                <h3 class="project-item__title"><span class="text-uppercase">Game of Life React App</span>
+                                                                    <div class="project-item__title-full"><span class="text-uppercase">Game of Life React App</span> – GEN ART WITH CONWAY'S GAME OF LIFE. As part of the Otus educational course.
+                                                                    </div>
+                                                                </h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            <div class="swiper-slide" data-slide-sort="App Stocks">
+                                                <article class="project-item">
+                                                    <div class="project-item__inner"><a class="project-item__image-wrap" href="http://netgon.ru/themeforest/arion_html/index.html" target="_blank">
+                                                            <div class="project-item__image-container"><img class="project-item__image img-cover js-lazy" src="/assets/img/content/projects/arion.jpg" alt="Admin Dashboard &amp; UI Kit" />
+                                                            </div>
+                                                        </a>
+                                                        <div class="project-item__details">
+                                                            <div class="project-item__details-inner">
+                                                                <h3 class="project-item__title"><span class="text-uppercase">Arion</span>
+                                                                    <div class="project-item__title-full"><span class="text-uppercase">Arion</span> – Admin Dashboard &amp; UI Kit
+                                                                    </div>
+                                                                </h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            <div class="swiper-slide" data-slide-sort="App Web">
+                                                <article class="project-item">
+                                                    <div class="project-item__inner"><a class="project-item__image-wrap js-lightbox-gallery" href="#" data-cropped="true" data-images="[{&quot;src&quot;:&quot;/assets/img/content/projects/softsmile/1.jpg&quot;,&quot;alt&quot;:&quot;Softsmile&quot;},{&quot;src&quot;:&quot;/assets/img/content/projects/softsmile/2.jpg&quot;,&quot;alt&quot;:&quot;Softsmile&quot;},{&quot;src&quot;:&quot;/assets/img/content/projects/softsmile/3.jpg&quot;,&quot;alt&quot;:&quot;Softsmile&quot;},{&quot;src&quot;:&quot;/assets/img/content/projects/softsmile/4.jpg&quot;,&quot;alt&quot;:&quot;Softsmile&quot;},{&quot;src&quot;:&quot;/assets/img/content/projects/softsmile/5.jpg&quot;,&quot;alt&quot;:&quot;Softsmile&quot;},{&quot;src&quot;:&quot;/assets/img/content/projects/softsmile/6.jpg&quot;,&quot;alt&quot;:&quot;Softsmile&quot;},{&quot;src&quot;:&quot;/assets/img/content/projects/softsmile/7.jpg&quot;,&quot;alt&quot;:&quot;Softsmile&quot;},{&quot;src&quot;:&quot;/assets/img/content/projects/softsmile/8.jpg&quot;,&quot;alt&quot;:&quot;Softsmile&quot;},{&quot;src&quot;:&quot;/assets/img/content/projects/softsmile/9.jpg&quot;,&quot;alt&quot;:&quot;Softsmile&quot;}]">
+                                                            <div class="project-item__image-container"><img class="project-item__image img-cover js-lazy" src="/assets/img/content/projects/softsmile/1.jpg" alt="Was founded by a group of tech disruptors committed to making perfect smiles affordable for everyone." />
+                                                            </div>
+                                                        </a>
+                                                        <div class="project-item__details">
+                                                            <div class="project-item__details-inner">
+                                                                <h3 class="project-item__title"><span class="text-uppercase"><a href="https://softsmile.com/" target="_blank">Softsmile</a></span>
+                                                                    <div class="project-item__title-full"><span class="text-uppercase"><a href="https://softsmile.com/" target="_blank">Softsmile</a></span> – Was founded by a group of tech disruptors committed to making perfect smiles affordable for everyone.
+                                                                    </div>
+                                                                </h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            <div class="swiper-slide" data-slide-sort="Web">
+                                                <article class="project-item">
+                                                    <div class="project-item__inner"><a class="project-item__image-wrap" href="https://gamemag.ru/" target="_blank">
+                                                            <div class="project-item__image-container"><img class="project-item__image img-cover js-lazy" src="/assets/img/content/projects/gm/1.jpg" alt="This page contains the editors of the first video game portal in Russia" />
+                                                            </div>
+                                                        </a>
+                                                        <div class="project-item__details">
+                                                            <div class="project-item__details-inner">
+                                                                <h3 class="project-item__title"><span class="text-uppercase"><a href="https://gamemag.ru/" target="_blank">Gamemag.ru</a></span>
+                                                                    <div class="project-item__title-full"><span class="text-uppercase"><a href="https://gamemag.ru/" target="_blank">Gamemag.ru</a></span> – This page contains the editors of the first video game portal in Russia
+                                                                    </div>
+                                                                </h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            <div class="swiper-slide" data-slide-sort="Stocks">
+                                                <article class="project-item">
+                                                    <div class="project-item__inner"><a class="project-item__image-wrap" href="http://netgon.ru/themeforest/geometry-24_html/" target="_blank">
+                                                            <div class="project-item__image-container"><img class="project-item__image img-cover js-lazy" src="/assets/img/content/projects/geometry-24-online-store.jpg" alt="Store Online" />
+                                                            </div>
+                                                        </a>
+                                                        <div class="project-item__details">
+                                                            <div class="project-item__details-inner">
+                                                                <h3 class="project-item__title"><span class="text-uppercase">Geometry 24</span>
+                                                                    <div class="project-item__title-full"><span class="text-uppercase">Geometry 24</span> – Store Online
+                                                                    </div>
+                                                                </h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            <div class="swiper-slide" data-slide-sort="Web">
+                                                <article class="project-item">
+                                                    <div class="project-item__inner"><a class="project-item__image-wrap" href="https://evscoder.github.io/www/bnns/" target="_blank">
+                                                            <div class="project-item__image-container"><img class="project-item__image img-cover js-lazy" src="/assets/img/content/projects/bananas-promo-website.jpg" alt="We are bananas, Craftsmen of experiences" />
+                                                            </div>
+                                                        </a>
+                                                        <div class="project-item__details">
+                                                            <div class="project-item__details-inner">
+                                                                <h3 class="project-item__title"><span class="text-uppercase">Bananas</span>
+                                                                    <div class="project-item__title-full"><span class="text-uppercase">Bananas</span> – We are bananas, Craftsmen of experiences
+                                                                    </div>
+                                                                </h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            <div class="swiper-slide" data-slide-sort="Web">
+                                                <article class="project-item">
+                                                    <div class="project-item__inner"><a class="project-item__image-wrap" href="https://evscoder.github.io/www/wbj" target="_blank">
+                                                            <div class="project-item__image-container"><img class="project-item__image img-cover js-lazy" src="/assets/img/content/projects/Waybjj.jpg" alt="The Way of Brazilian Jiu Jitsu" />
+                                                            </div>
+                                                        </a>
+                                                        <div class="project-item__details">
+                                                            <div class="project-item__details-inner">
+                                                                <h3 class="project-item__title"><span class="text-uppercase">Waybjj</span>
+                                                                    <div class="project-item__title-full"><span class="text-uppercase">Waybjj</span> – The Way of Brazilian Jiu Jitsu
+                                                                    </div>
+                                                                </h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            <div class="swiper-slide" data-slide-sort="App Web">
+                                                <article class="project-item">
+                                                    <div class="project-item__inner"><a class="project-item__image-wrap" href="https://evscoder.github.io/www/ips/servers.html" target="_blank">
+                                                            <div class="project-item__image-container"><img class="project-item__image img-cover js-lazy" src="/assets/img/content/projects/ips.jpg" alt="get directly from your smart home with our newest notification" />
+                                                            </div>
+                                                        </a>
+                                                        <div class="project-item__details">
+                                                            <div class="project-item__details-inner">
+                                                                <h3 class="project-item__title"><span class="text-uppercase">IPS Admin Panel</span>
+                                                                    <div class="project-item__title-full"><span class="text-uppercase">IPS Admin Panel</span> – get directly from your smart home with our newest notification
+                                                                    </div>
+                                                                </h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            <div class="swiper-slide" data-slide-sort="Stocks">
+                                                <article class="project-item">
+                                                    <div class="project-item__inner"><a class="project-item__image-wrap" href="http://netgon.ru/themeforest/yourtravelworld_html/index.html" target="_blank">
+                                                            <div class="project-item__image-container"><img class="project-item__image img-cover js-lazy" src="/assets/img/content/projects/your-travel-world.jpg" alt="Online Travel Booking" />
+                                                            </div>
+                                                        </a>
+                                                        <div class="project-item__details">
+                                                            <div class="project-item__details-inner">
+                                                                <h3 class="project-item__title"><span class="text-uppercase">Your Travel World</span>
+                                                                    <div class="project-item__title-full"><span class="text-uppercase">Your Travel World</span> – Online Travel Booking
+                                                                    </div>
+                                                                </h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            <div class="swiper-slide" data-slide-sort="Stocks">
+                                                <article class="project-item">
+                                                    <div class="project-item__inner"><a class="project-item__image-wrap" href="http://netgon.ru/themeforest/carros_html/" target="_blank">
+                                                            <div class="project-item__image-container"><img class="project-item__image img-cover js-lazy" src="/assets/img/content/projects/carros-html-template.jpg" alt="Automotive" />
+                                                            </div>
+                                                        </a>
+                                                        <div class="project-item__details">
+                                                            <div class="project-item__details-inner">
+                                                                <h3 class="project-item__title"><span class="text-uppercase">Carros</span>
+                                                                    <div class="project-item__title-full"><span class="text-uppercase">Carros</span> – Automotive
+                                                                    </div>
+                                                                </h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                        </div>
+                                        <div class="project-covers__arrows">
+                                            <button class="button-arrow button-arrow--prev" type="button"></button>
+                                            <button class="button-arrow button-arrow--next" type="button"></button>
+                                        </div>
+                                    </div>
+                                    <div class="project-covers__slider-counter"></div>
+                                    <div class="project-covers__progress-line swiper-scrollbar swiper-scrollbar--horizontal"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+                <footer class="footer footer--fixed">
+                    <div class="container">
+                        <div class="container__center">
+                            <div class="footer__copyright">© <span class="js-copyright-date"></span> by portfolio website</div>
+                        </div>
+                    </div>
+                </footer><svg style='border: 0 !important; clip: rect(0 0 0 0) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important;' xmlns="https://www.w3.org/2000/svg"'>
+<linearGradient id="circleGrad">
+<stop offset="0%" stop-color="#fbc2eb"></stop>
+<stop offset="100%" stop-color="#a6c1ee"></stop>
+</linearGradient>
+</svg><a class="back-to-top-fixed" href="#"><svg class="back-to-top-fixed__progress" viewport="0 0 100 100">
+<circle cx="30" cy="30" r="27"></circle>
+<circle class="back-to-top-fixed__bar" transform="rotate(270 30 30)" cx="30" cy="30" r="27"></circle>
+</svg>
+          <svg class="icon-back-to">
+            <use xlink:href="assets/img/svg-symbols.svg#back-to"></use>
+          </svg></a>
+      </div>
+    </div>
+    <script src="assets/js/vendor.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
