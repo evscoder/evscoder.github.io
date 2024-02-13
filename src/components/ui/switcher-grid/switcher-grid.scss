@@ -1,0 +1,177 @@
+.switcher-grid {
+    --offset: 100vh - var(--intro-height) - var(--projects-padding-top);
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    width: 100%;
+    margin-top: calc((var(--offset)) * -1);
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+    pointer-events: none;
+
+    @media screen and (max-width: 767px) {
+        --offset: 94px - var(--projects-padding-top);
+    }
+
+    &.is-visible {
+        opacity: 1;
+    }
+
+    &.is-sticky {
+        position: fixed;
+        top: calc(var(--offset));
+        transform: translateY(var(--header-height)) translateY(20px);
+    }
+
+    html.is-animating & {
+        right: calc(var(--container-gutter) + var(--scrollbar-width));
+    }
+
+    html.is-touch & {
+        right: var(--container-gutter);
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: 56px 1fr 56px;
+        align-items: center;
+        justify-items: center;
+        padding-left: var(--container-gutter);
+        padding-right: var(--container-gutter);
+
+        @media screen and (max-width: 560px) {
+            grid-template-columns: 1fr auto;
+            justify-items: start;
+        }
+    }
+
+    &__button {
+        grid-column: 3;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr 1fr);
+        width: 60px;
+        padding: 1px;
+        border: 2px solid var(--white-color);
+        outline: none;
+        border-radius: 6px;
+        transform: scale(1);
+        transition: var(--t-base);
+        background-color: var(--white-color);
+        box-shadow: 0 15px 10px 0 rgba(0, 0, 0, 0.4), 0 5px 10px 2px rgba(0, 0, 0, 0.35) inset;
+        pointer-events: none;
+
+        @media screen and (max-width: 560px) {
+            grid-column: 2;
+        }
+
+        .switcher-grid.is-visible & {
+            pointer-events: all;
+        }
+    }
+
+    &__bar {
+        position: relative;
+        height: 16px;
+        background-color: var(--primary-color);
+        transition: var(--t-base);
+        pointer-events: none;
+
+        &::before {
+            content: " ";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            box-shadow: 0 6px 12px var(--primary-color);
+            border-radius: 50%;
+            transition: var(--t-base);
+            transition-property: box-shadow;
+        }
+
+        &:nth-child(1) {
+            border-radius: 3px 0 0 0;
+            transform: translateY(-4px) translateX(-4px);
+        }
+
+        &:nth-child(2) {
+            border-radius: 0 3px 0 0;
+            transform: translateY(4px) translateX(4px);
+        }
+
+        &:nth-child(3) {
+            border-radius: 0 0 0 3px;
+            transform: translateY(4px) translateX(-4px);
+        }
+
+        &:nth-child(4) {
+            border-radius: 0 0 3px 0;
+            transform: translateY(12px) translateX(4px);
+        }
+
+        .switcher-grid--active & {
+            transform: translateX(0);
+        }
+
+        @media (hover: hover) {
+            .switcher-grid__button:hover & {
+                transform: translateX(0);
+            }
+        }
+    }
+
+    &__filter {
+        --border-radius: 36px;
+        grid-column: 2;
+        grid-row: 1;
+        position: relative;
+        display: grid;
+        grid-auto-flow: column;
+        border-radius: var(--border-radius);
+        background-color: var(--primary-color);
+        box-shadow: 0 15px 10px 0 rgba(0, 0, 0, 0.4);
+        pointer-events: none;
+
+        .switcher-grid.is-visible & {
+            pointer-events: all;
+        }
+
+        @media screen and (max-width: 560px) {
+            grid-column: 1;
+        }
+    }
+
+    &__filter-btn {
+        padding: 10px 13px;
+        background-color: transparent;
+        border-radius: calc(var(--border-radius) / 2);
+        color: #fff;
+        border: none;
+        outline: none;
+
+        &.is-active {
+            color: var(--primary-color);
+            transition: color 0s linear 150ms;
+        }
+
+        &::before {
+            display: block;
+            position: relative;
+            z-index: 2;
+            content: attr(data-text);
+        }
+    }
+
+    &__float {
+        position: absolute;
+        top: -1px;
+        bottom: -1px;
+        z-index: 1;
+        border-radius: var(--border-radius);
+        background: var(--white-color);
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.4);
+        transition: all 200ms ease-out;
+        pointer-events: none;
+    }
+}

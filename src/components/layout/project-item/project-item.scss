@@ -1,0 +1,268 @@
+.project-item {
+    --border-radius: 2.4%;
+    position: relative;
+
+    .project-items__row {
+        clip-path: none!important;
+    }
+
+    &--empty {
+        pointer-events: none;
+        clip-path: none!important;
+
+        &::before {
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            content: "";
+            height: 95%;
+            margin: auto;
+            box-shadow: 40px 80px 160px rgba(69, 90, 100, 0.24);
+        }
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    &__inner {
+        text-decoration: none;
+        color: var(--white-color);
+        outline: none;
+        width: 100%;
+        margin: auto;
+
+        .theme-alt & {
+            color: var(--black-primary-color);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 5%;
+            left: 0;
+            opacity: 0;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .project-item--empty & {
+            &::before {
+                opacity: 0.12;
+                background-color: var(--white-color);
+                outline: none;
+            }
+        }
+
+        &:link,
+        &:hover,
+        &:focus {
+            color: var(--white-color);
+
+            .theme-alt & {
+                color: var(--black-primary-color);
+            }
+        }
+
+        &:focus::before {
+            opacity: 1;
+        }
+    }
+
+    &__image-wrap {
+        position: relative;
+        display: block;
+        z-index: 1;
+
+        &::before {
+            position: relative;
+            z-index: -1;
+            content: '';
+            display: block;
+            padding-bottom: 75%;
+            border-radius: var(--border-radius);
+            pointer-events: none;
+            opacity: 0;
+            transition: var(--t-base);
+            transition-property: opacity;
+
+            @media(hover: hover) {
+                filter: drop-shadow(0 0 12px rgba(69, 90, 100, 0.34));
+            }
+
+            .project-item--empty & {
+                opacity: 0;
+            }
+        }
+
+        &:hover {
+            &::before {
+                opacity: 1;
+            }
+        }
+
+        .js-tilt-glare {
+            border-radius: var(--border-radius)!important;
+        }
+
+        &::after {
+            content: '';
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: var(--border-radius);
+            background-color: var(--black-color-a5);
+            transition: var(--t-base);
+
+            .project-item:hover &,
+            .project-item__inner:focus & {
+                opacity: 0.8;
+            }
+
+            .project-item--empty & {
+                background-color: transparent;
+            }
+        }
+    }
+
+    &__image-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__image {
+        height: 100%;
+        width: 100%;
+        border-radius: var(--border-radius);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 12px 16px rgba(0, 0, 0, 0.2);
+        user-select: none;
+    }
+
+    &__details {
+        display: flex;
+        align-items: center;
+        transition: var(--t-base);
+
+        @media screen and (max-width: 767px) {
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 16px;
+            background-color: var(--primary-color);
+            opacity: 1;
+            box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+        }
+
+        @media screen and (min-width: 768px) {
+            position: absolute;
+            inset: auto 0 0;
+            padding: 15px;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0;
+        }
+
+        .project-item:hover & {
+            opacity: 1;
+        }
+
+        .project-item--empty & {
+            display: none;
+        }
+    }
+
+    &__details-inner {
+        --line-height: 4px;
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        @media screen and (max-width: 480px) {
+            align-items: center;
+        }
+
+        .project-item--empty & {
+            opacity: 0;
+        }
+    }
+
+    &__title {
+        position: relative;
+        display: grid;
+        width: 100%;
+        margin: 0 0 calc(var(--line-height) * -1);
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.05em;
+        font-family: var(--font-family-primary);
+        color: var(--white-color);
+
+        @media screen and (min-width: 768px) {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            min-height: 48px;
+        }
+
+        > span {
+            position: absolute;
+            display: none;
+
+            @media screen and (min-width: 768px) {
+                display: block;
+            }
+        }
+
+        .text-uppercase {
+            font-weight: 700;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: 220ms ease-in-out;
+        }
+
+        span:not(.project-item__title-full) {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+
+    &__title-full {
+        opacity: 0;
+        transition: var(--t-base);
+
+        @media screen and (max-width: 767px) {
+            display: contents;
+        }
+
+        .text-uppercase {
+            opacity: 0;
+            pointer-events: none;
+
+            @media screen and (max-width: 767px) {
+                margin-bottom: 4px;
+                opacity: 1;
+            }
+        }
+
+        .project-item:hover & {
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+mixin img(data)
+    img(src=`${staticPath.img}/${data.img}`, alt=data.title)&attributes(data.attrs)
+
+mixin link(data)
+    a(href=data.url)&attributes(data.attrs)!=data.text
+
+mixin icon(icon, width=undefined, height=width)
+    svg(class=`icon-${icon}`, class=cls width=width, height=height)&attributes(attributes)
+        use(xlink:href=symbolsInject ? `#${icon}` : `${PATH}assets/img/svg-symbols.svg#${icon}` )
+
+mixin icon-m(icon, attrs)
+    i.icon.material-icons&attributes(attrs)=icon

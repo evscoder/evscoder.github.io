@@ -1,0 +1,25 @@
+include ../social-list/social-list
+
+mixin About({ name, experience, skills, contacts, social })
+    section.section.section-about
+        .container
+            .container__center
+                .section__content
+                    h2.section__title
+                        .section__title-text
+                            | Hello
+                            span.section__title-line.section__title-line--after
+                    p!=name
+                    p!=experience
+                    p I have been involved in client development since 2015. Worked on many projects that cover different areas, both websites and complex web applications. Worked on projects from scratch to completion. Was involved in creating project architecture, as well as selecting development tools. Worked in both large and small teams, where there were developers of different levels from middle to lead. I also have experience in developing mobile and desktop applications in Angular.js using the UI frameworks Ionic, Material UI, Nx.
+                    br
+                    p 🛠️ I have professional skills in the following:
+                    ul
+                        each skill in skills
+                            li!=skill.text
+                    br
+                    h3 How to contact me 📣
+                    +SocialList(contacts)
+                    br
+                    h3 I'm on social networks 🚀
+                    +SocialList(social)

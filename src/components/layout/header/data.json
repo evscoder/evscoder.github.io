@@ -1,0 +1,50 @@
+{
+    "header": {
+        "default": {
+            "socialLinks": [
+                {
+                    "url": "about.html",
+                    "text": "About Me"
+                }, {
+                    "url": "https://github.com/evscoder",
+                    "icon": "github",
+                    "text": "Github",
+                    "target": true
+                }
+            ],
+            "router": {
+                "href": "about.html",
+                "props": {
+                    "data-direction": "about"
+                }
+            },
+            "avatar": {
+                "tooltip": "Experience"
+            }
+        },
+        "page": {
+            "socialLinks": [
+                {
+                    "props": {
+                        "data-direction": "next"
+                    },
+                    "url": "index.html",
+                    "text": "Portfolio"
+                }, {
+                    "url": "https://github.com/evscoder",
+                    "icon": "github",
+                    "text": "Github",
+                    "target": true
+                }
+            ],
+            "router": {
+                "href": "index.html",
+                "props": {
+                    "data-direction": "portfolio"
+                }
+            },
+            "avatar": {
+            }
+        }
+    }
+}

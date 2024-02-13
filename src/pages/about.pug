@@ -1,0 +1,20 @@
+extends templates/template
+
+append components
+    include ../components/layout/intro/intro
+    include ../components/layout/about/about
+    -
+        page = {
+            id: 'about',
+            attrs: {},
+            inner: true
+        }
+        scrollTop = false;
+
+block header
+    +Header(header.page).page-header--secondary
+
+block content
+    +Intro(intro.about).intro--page
+        +About(about)
+

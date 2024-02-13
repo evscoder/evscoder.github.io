@@ -1,0 +1,54 @@
+.pswp {
+    &__bg {
+        background-color: var(--black-primary-color);
+    }
+
+    &__button {
+        svg {
+            fill: var(--gray-color-f30);
+        }
+
+        &--close {
+            opacity: 1;
+        }
+
+        &--arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            margin: -25px 20px 0;
+            border-radius: 50%;
+            background-color: var(--brown-color)!important;
+            transition: opacity 0.2s;
+
+            &:active {
+                outline: none;
+                opacity: 0.9;
+            }
+
+            @media screen and (max-width: 767px) {
+                display: none;
+            }
+
+            svg {
+                width: 28px;
+                height: 23px;
+                fill: var(--white-color);
+            }
+        }
+    }
+
+    &__caption {
+        @include textEllipsis(2);
+        position: absolute;
+        right: 15px;
+        bottom: 16px;
+        left: 15px;
+        max-width: 740px;
+        margin: auto;
+        text-align: center;
+        color: var(--white-color);
+    }
+}

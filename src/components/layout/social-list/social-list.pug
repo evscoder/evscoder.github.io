@@ -1,0 +1,5 @@
+mixin SocialList(data)
+    ul.social-list
+        each item in data
+            li.social-list__item
+                a.social-list__link(href=item.link, target='_blank') #[+icon(item.icon)(class='social-list__link-icon')] #[span!=item.text]

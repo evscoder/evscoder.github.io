@@ -1,0 +1,23 @@
+include ../../ui/tooltip/tooltip
+
+mixin Header(data)
+    header.page-header&attributes(attributes)
+        .page-header__container.container
+            .page-header__row
+                .page-header__left
+                    .page-header__nav
+                        each item in data.socialLinks
+                            a.page-header__nav-link(href=item.url, class={ 'page-header__nav-link--pre': item.icon }, target=(item.target ? '_blank' : undefined))&attributes(item.props)
+                                if item.icon
+                                    +icon(item.icon, 14)
+                                span.page-header__nav-text!=item.text
+                        a.page-header__avatar(href=data.router.href)&attributes(data.router.props)
+                            .page-header__avatar-img
+                                img(src=`${staticPath.img}/avatar.jpg`, width="152", alt="#")
+                            if data.avatar.tooltip
+                                +Tooltip(data.avatar.tooltip)
+                        button.switcher-theme(data-switch='theme')
+                            span.switcher-theme__handle
+                .page-header__center
+                    a.page-header__title-link(href=data.router.href)&attributes(data.router.props)
+                        h2.page-header__title #[span.char Evgeny] #[span.char Staroverov]

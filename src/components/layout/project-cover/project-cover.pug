@@ -1,0 +1,28 @@
+include ../../ui/button-arrow/button-arrow
+include ../../layout/project-item/project-item
+
+mixin ProjectsCover(data)
+    section#projects.project-covers
+        h1.project-covers__title #[.project-covers__title-text Projects]
+        .container.container--fluid
+            .container__center
+                .project-covers__items
+                    each item in data
+                        .project-covers__item(class={
+                            'project-covers__item--last': item.empty
+                        }, data-sort=item.sort)
+                            +projectItem(item)
+        .project-covers__row
+            .container
+                .container__center
+                    #projectsCoverSlider.project-covers__row-slider.swiper-container
+                        .swiper-wrapper
+                            each item in data
+                                if !item.empty
+                                    .swiper-slide(data-slide-sort=item.sort)
+                                        +projectItem(item)
+                        .project-covers__arrows
+                            +ButtonArrow({direction: 'prev'})
+                            +ButtonArrow({direction: 'next'})
+                    .project-covers__slider-counter
+                    .project-covers__progress-line.swiper-scrollbar.swiper-scrollbar--horizontal

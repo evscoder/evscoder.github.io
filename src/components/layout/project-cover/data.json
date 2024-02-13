@@ -1,0 +1,112 @@
+{
+  "projects": {
+    "default": [
+      {
+        "image": "/assets/img/content/projects/game-of-life.jpeg",
+        "link": "https://evscoder.github.io/otus-course-work-react/",
+        "description": "GEN ART WITH CONWAY'S GAME OF LIFE. As part of the Otus educational course.",
+        "title": "Game of Life React App",
+        "sort": "App Web"
+      },
+      {
+        "image": "/assets/img/content/projects/arion.jpg",
+        "link": "http://netgon.ru/themeforest/arion_html/index.html",
+        "description": "Admin Dashboard & UI Kit",
+        "title": "Arion",
+        "sort": "App Stocks"
+      },
+      {
+        "image": "/assets/img/content/projects/softsmile/1.jpg",
+        "link": "#",
+        "description": "Was founded by a group of tech disruptors committed to making perfect smiles affordable for everyone.",
+        "title": "<a href=\"https://softsmile.com/\" target=\"_blank\">Softsmile</a>",
+        "sort": "App Web",
+        "target": {
+          "images": [
+            {
+              "src": "/assets/img/content/projects/softsmile/1.jpg",
+              "alt": "Softsmile"
+            }, {
+              "src": "/assets/img/content/projects/softsmile/2.jpg",
+              "alt": "Softsmile"
+            }, {
+              "src": "/assets/img/content/projects/softsmile/3.jpg",
+              "alt": "Softsmile"
+            }, {
+              "src": "/assets/img/content/projects/softsmile/4.jpg",
+              "alt": "Softsmile"
+            }, {
+              "src": "/assets/img/content/projects/softsmile/5.jpg",
+              "alt": "Softsmile"
+            }, {
+              "src": "/assets/img/content/projects/softsmile/6.jpg",
+              "alt": "Softsmile"
+            }, {
+              "src": "/assets/img/content/projects/softsmile/7.jpg",
+              "alt": "Softsmile"
+            }, {
+              "src": "/assets/img/content/projects/softsmile/8.jpg",
+              "alt": "Softsmile"
+            }, {
+              "src": "/assets/img/content/projects/softsmile/9.jpg",
+              "alt": "Softsmile"
+            }
+          ]
+        }
+      },
+      {
+        "image": "/assets/img/content/projects/gm/1.jpg",
+        "link": "https://gamemag.ru/",
+        "description": "This page contains the editors of the first video game portal in Russia",
+        "title": "<a href=\"https://gamemag.ru/\" target=\"_blank\">Gamemag.ru</a>",
+        "sort": "Web"
+      },
+      {
+        "image": "/assets/img/content/projects/geometry-24-online-store.jpg",
+        "link": "http://netgon.ru/themeforest/geometry-24_html/",
+        "description": "Store Online",
+        "title": "Geometry 24",
+        "sort": "Stocks"
+      },
+      {
+        "image": "/assets/img/content/projects/bananas-promo-website.jpg",
+        "link": "https://evscoder.github.io/www/bnns/",
+        "description": "We are bananas, Craftsmen of experiences",
+        "title": "Bananas",
+        "sort": "Web"
+      },
+      {
+        "image": "/assets/img/content/projects/Waybjj.jpg",
+        "link": "https://evscoder.github.io/www/wbj",
+        "description": "The Way of Brazilian Jiu Jitsu",
+        "title": "Waybjj",
+        "sort": "Web"
+      },
+      {
+        "image": "/assets/img/content/projects/ips.jpg",
+        "link": "https://evscoder.github.io/www/ips/servers.html",
+        "description": "get directly from your smart home with our newest notification",
+        "title": "IPS Admin Panel",
+        "sort": "App Web"
+      },
+      {
+        "image": "/assets/img/content/projects/your-travel-world.jpg",
+        "link": "http://netgon.ru/themeforest/yourtravelworld_html/index.html",
+        "description": "Online Travel Booking",
+        "title": "Your Travel World",
+        "sort": "Stocks"
+      },
+      {
+        "image": "/assets/img/content/projects/carros-html-template.jpg",
+        "link": "http://netgon.ru/themeforest/carros_html/",
+        "description": "Automotive",
+        "title": "Carros",
+        "sort": "Stocks"
+      },
+      {
+        "empty": true,
+        "sort": "Web App Stocks"
+      }
+    ]
+  }
+}

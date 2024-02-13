@@ -1,0 +1,11 @@
+{
+    "intro": {
+        "default": {
+            "title": "Portfolio"
+        },
+
+        "about": {
+            "title": "About"
+        }
+    }
+}

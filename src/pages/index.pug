@@ -1,0 +1,26 @@
+extends templates/template
+
+append components
+    include ../components/layout/intro/intro
+    include ../components/layout/project-cover/project-cover
+    include ../components/layout/project-guide/project-guide
+    include ../components/ui/switcher-grid/switcher-grid
+    -
+        page = {
+            id: 'home',
+            attrs: {}
+        }
+        footer = {
+            fixed: true
+        }
+
+block intro
+    +Intro(intro.default)
+
+block projectSwitcher
+    +SwitcherGrid
+    +ProjectGuide({text: "Swipe projects left to right <br> <small class=\"font-weight-500\">Click to close<small/>"})
+
+block content
+    +ProjectsCover(projects.default)
+

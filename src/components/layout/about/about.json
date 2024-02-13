@@ -1,0 +1,54 @@
+{
+    "about": {
+        "name": "\uD83D\uDC68\u200D\uD83D\uDCBB My name is Evgeny Staroverov. <br> I’m front-End Developer from Russia, Krasnoyarsk.",
+        "experience": "\uD83D\uDCC5 I have more than <span class=\"js-exp-date\" data-start-date=\"2015\"></span> &nbsp;years of IT experience.",
+        "skills": [
+            {
+                "text": "React stack: React (Hooks), Redux, Redux Toolkit, Thunks, Saga, React Testing Library, Styled-Components, TypeScript, Ant Design, Tailwind CSS, JS-in-CSS, Radix UI, Rive.app"
+            },
+            {
+                "text": "Angular stack: Angular, Nx, Material Design, Ionic, TypeScript"
+            },
+            {
+                "text": "Other stack: HTML, XML, SVG, CSS, BEM, SCSS, JavaScript (ES5, ES6), TypeScript, GSAP, Pug.js, Nunjucks, MJML, HTTP, REST, GraphQL, WebSockets, Cypress, Jest, TDD, BDD"
+            },
+            {
+                "text": "Build tools: WebPack, Gulp.js, Npm, Yarn, Vite.js, Nx, Eslint, TSlint, Prettier"
+            },
+            {
+                "text": "VCS: Git, Git Flow, CI/CD, husky, Bitbucket, Github, Gitlab"
+            },
+            {
+                "text": "UI frameworks: Bootstrap, Ionic Framework, Material Design, Ant Design, Tailwind CSS, Radix UI, Storybook"
+            },
+            {
+                "text": "Management: JIRA, Confluence, Scrum, Kanban, Agile"
+            },
+            {
+                "text": "Soft skills: Webstorm, VS, Figma, Zeplin, InDesign"
+            }
+        ],
+        "contacts": [
+            {
+                "link": "https://t.me/evgenystaroverov",
+                "icon": "icon-telegram",
+                "text": "Telegram"
+            }
+        ],
+        "social": [
+            {
+                "link": "https://www.linkedin.com/in/evgst/",
+                "icon": "icon-linkedin",
+                "text": "Linkedin"
+            }, {
+                "link": "https://github.com/evscoder",
+                "icon": "github",
+                "text": "Github"
+            }, {
+                "link": "https://codepen.io/evsgo",
+                "icon": "icon-codepen",
+                "text": "Codepen"
+            }
+        ]
+    }
+}

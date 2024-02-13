@@ -1,0 +1,12 @@
+mixin SwitcherGrid
+    .switcher-grid
+        .switcher-grid__container.container
+            button.switcher-grid__button.js-switcher-grid
+                - for (let i = 0; i < 4; i++)
+                    .switcher-grid__bar
+            #projectFilter.switcher-grid__filter
+                .switcher-grid__float
+                button.switcher-grid__filter-btn.is-active(data-toggle="Web Stocks App", data-text='All')
+                button.switcher-grid__filter-btn(data-toggle="Web", data-text='Web')
+                button.switcher-grid__filter-btn(data-toggle="App", data-text='App')
+                button.switcher-grid__filter-btn(data-toggle="Stocks", data-text='Stocks')

@@ -1,0 +1,13 @@
+mixin Intro(data)
+    .intro&attributes(attributes)
+        .intro__gradient
+        .intro__bg
+            canvas#stars.intro__stars
+        .intro-caption
+            .intro-caption__title=data.title
+        if page.id === 'about'
+            block
+        else
+            .intro__content
+                h1.intro__title #[span.caption.intro__title-letters Evgeny Staroverov] #[span.intro__title-letters Front-End] #[span.text-type Developer #[span.skills HTML, CSS, JS, TS, React ...]]
+                a.intro__scroll-btn.js-scroll-link.is-visible(href=data.scroll ? data.scroll : '#content')

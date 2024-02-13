@@ -1,0 +1,21 @@
+mixin projectItem({ empty, link, target, title, description, image }, swiper)
+    article.project-item(class={'project-item--empty': empty})
+        .project-item__inner
+            a.project-item__image-wrap(
+                href=link,
+                class={"js-lightbox-gallery" : target},
+                data-cropped=(target ? "true" : undefined),
+                data-images=(target ? target.images : undefined),
+                target=(target ? undefined : "_blank")
+            )
+                .project-item__image-container
+                    if !empty
+                        img.project-item__image.img-cover.js-lazy(src=image, alt=description)
+            .project-item__details
+                .project-item__details-inner
+                    h3.project-item__title
+                        if empty
+                            | Project
+                        else
+                            span.text-uppercase!=title
+                            .project-item__title-full #[span.text-uppercase!=title] – #[=description]

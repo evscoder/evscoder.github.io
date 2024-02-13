@@ -1,0 +1,71 @@
+.back-to-top-fixed {
+    --size: 60px;
+    position: fixed;
+    display: block;
+    height: var(--size);
+    width: var(--size);
+    bottom: 12px;
+    right: var(--container-gutter);
+    background: var(--white-color-a2);
+    border-radius: var(--size);
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.7);
+    transition: var(--t-base);
+    transition-property: transform, opacity;
+
+    &:not(.in-visible).is-active {
+        pointer-events: all;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    html.is-animating & {
+        right: calc(var(--container-gutter) + var(--scrollbar-width));
+    }
+
+    html.is-touch & {
+        right: var(--container-gutter);
+    }
+
+    &:hover {
+        background: var(--white-color-a6);
+    }
+
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        display: block;
+
+        &[class^='icon-back-to'] {
+            width: 24px;
+            height: 24px;
+            fill: var(--brown-color);
+            transition: var(--t-base);
+            transition-property: opacity;
+        }
+    }
+
+    &__progress {
+        width: 100%;
+        height: 100%;
+        fill: none;
+
+        circle {
+            stroke-width: 6px;
+            stroke-linecap: round;
+            fill: transparent;
+
+            &:nth-child(1) {
+                stroke: var(--white-color-a1);
+            }
+
+            &:nth-child(2) {
+                stroke: url(#circleGrad);
+            }
+        }
+    }
+}

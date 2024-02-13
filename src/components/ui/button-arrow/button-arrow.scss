@@ -1,0 +1,34 @@
+.button-arrow {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    padding: 0;
+    box-shadow: none;
+    background-color: transparent;
+    border: none;
+    color: var(--white-color);
+    transition: color 200ms ease-in;
+
+    .theme-light & {
+        color: var(--primary-color);
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        left: -9px;
+        width: 18px;
+        height: 18px;
+        margin: auto;
+        border-top: 2px solid;
+        border-right: 2px solid;
+        transform: rotate(45deg);
+    }
+
+    &--prev::before {
+        transform: rotate(225deg);
+        left: 9px;
+    }
+}
